@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,33 +7,35 @@
     <title>Movie Archive</title>
   </head>
   <body>
-    <div class="fixed-header">
-      <h3>Movie Archive</h3>
-      <div class="container">
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Support</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Donations</a>
-        </nav>
+      <div class="fixed-header">
+          <h1>Movie Archive</h1>
+          <div class="container">
+              <nav>
+                  <a href="#">Home</a>
+                  <a href="#">Support</a>
+                  <a href="#">Contact Us</a>
+                  <a href="#">Donations</a>
+              </nav>
+          </div>
       </div>
-    </div>
-    <div class="container">
-      <form action="action_page.php" method="POST">
-          <label for="actname">Actor's name:</label><br>
-          <input type="text" id="actname" name="actname" value=""><br>
-          <label for="dicname">Dicetor's name:</label><br>
-          <input type="text" id="dicname" name="dicname" value=""><br>
-          <label for="genre">Genre:</label><br>
-          <input type="text" id="genre" name="genre" value=""><br>
-          <label for="year">Release year:</label><br>
-          <input type="text" id="year" name="year" value=""><br>
-          <input type="submit" value="Submit">
-      </form>
-    </div>
-
-    <div class="fixed-footer">
-      <div>Copyright &copy; 2020 Devin Durbin</div>        
-    </div>
+      <div class="container">
+          <h2>Please fill out at least one field below</h2>
+          <form action="action_page.php" method="POST">
+              <label for="actname">Actor's name:</label><br>
+              <input type="text" id="actname" name="actname" value=""><br>
+              <label for="dicname">Dicetor's name:</label><br>
+              <input type="text" id="dicname" name="dicname" value=""><br>
+              <label for="genre">Genre:</label><br>
+              <input type="text" id="genre" name="genre" value=""><br>
+              <label for="year">Release year:</label><br>
+              <input type="text" id="year" name="year" value=""><br>
+              <input type="submit" value="Submit">
+          </form>
+      </div>
+      <h3>The button below is an alert explaining what it is.</h3>
+      <button type="button" onclick="alert('That button is only for the style sheet to work with.')">Click Me!</button>
+      <div class="fixed-footer">
+          <div>Copyright &copy; 2020 Devin Durbin</div>
+      </div>
   </body>
 </html>

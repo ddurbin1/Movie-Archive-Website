@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: white;
+      }
+      h3 {
+        color: black;
+        font-family: verdana;
+        font-size: 300%;
+      }
+      form  {
+        color: red;
+        font-family: courier;
+        font-size: 160%;
+        padding-left: 200px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Archive</title>
+  </head>
+  <body>
+    <h3>Movie Archive</h3>
+    <form action="devin.php" method="POST">
+        <label for="actname">Actor's name:</label><br>
+        <input type="text" id="actname" name="actname" value=""><br>
+        <label for="dicname">Dicetor's name:</label><br>
+        <input type="text" id="dicname" name="dicname" value=""><br>
+        <label for="genre">Genre:</label><br>
+        <input type="text" id="genre" name="genre" value=""><br>
+        <label for="year">Release year:</label><br>
+        <input type="text" id="year" name="year" value=""><br>
+        <label for="des">Brief Description:</label><br>
+        <textarea rows="4" cols="50" name="description" form="usrform">Enter text here</textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

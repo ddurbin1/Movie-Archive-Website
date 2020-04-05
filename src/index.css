@@ -1,4 +1,4 @@
-/*body{        
+body{        
     padding-top: 60px;
     padding-bottom: 40px;
 }
@@ -7,17 +7,35 @@ form {
     color: red;
     font-size: 30px;
 }
-h1 {
-}
+
 h2 {
     padding-top: 15%;
     padding-left: 15%;
 }
-h3 {
+
+.verticalLine {
+    position: absolute;
+    background-color: black;
+    width: 2px;
+    top: 200px;
+    bottom: 90px;
+    left: 50%;
 }
-button {
-    font-size: 36px;
+
+.leftcontainer, .rightcontainer {
+    width: 49%;
+    position: fixed;
+    top: 200px;
 }
+
+.leftcontainer {
+    left: 1%;
+}
+
+.rightcontainer {
+    left: 51%;
+}
+
 .fixed-header, .fixed-footer{
     width: 100%;
     position: fixed;        
@@ -42,9 +60,9 @@ nav a{
     text-decoration: none;
     padding: 7px 25px;
     display: inline-block;
-}*/
+}
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic&display=swap");
+/*@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic&display=swap");
 
 :root {
     --blue: #375a7f;
@@ -11797,4 +11815,4 @@ a.text-dark:hover, a.text-dark:focus {
 
     .list-group-item-action .list-group-item-heading {
         color: #fff;
-    }
+    }*/

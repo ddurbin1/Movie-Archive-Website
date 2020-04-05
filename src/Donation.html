@@ -11,14 +11,23 @@
         <h1>Movie Archive</h1>
         <div class="container">
             <nav>
-                <a href="index.html">Home</a>
+                <a href="Home.html">Home</a>
                 <a href="Support.html">Support</a>
                 <a href="Contact.html">Contact Us</a>
                 <a href="Donation.html">Donations</a>
             </nav>
         </div>
     </div>
-    
+    <form class="dropdown" action="payment.php" method="POST">
+        <p>
+            <label>Select payment</label>
+            <select id="myList">
+                <option value="1">Paypal</option>
+                <option value="2">Credit Card</option>
+            </select>
+        </p>
+        <input type="submit" value="Submit">
+    </form>
 
     <div class="fixed-footer">
         <div>Copyright &copy; 2020 Devin Durbin</div>

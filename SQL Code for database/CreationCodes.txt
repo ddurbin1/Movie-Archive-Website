@@ -1,0 +1,28 @@
+/*
+CREATE TABLE actors(
+    ID int Primary Key,
+    LastName varchar(255),
+    FirstName varchar(255)
+);
+CREATE TABLE directors(
+    ID int Primary Key,
+    LastName varchar(255),
+    FirstName varchar(255)
+);
+CREATE TABLE genre(
+    ID int Primary Key,
+    Type varchar(255)
+);
+CREATE TABLE movies(
+    ID int Primary Key,
+    Actors_Name varchar(255),
+    Directors_Name varchar(255),
+    Discription varchar(255),
+    Genre varchar(255),
+    Premiere_Year int,
+    Year int,
+    FOREIGN KEY (Actors_Name) REFERENCES actors(ID),
+    FOREIGN KEY (Directors_Name) REFERENCES directors(ID),
+    FOREIGN KEY (Genre) REFERENCES genre(ID)
+);
+*/

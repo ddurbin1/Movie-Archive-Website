@@ -4,11 +4,11 @@
       "PutRequest": {
         "Item": {
           "MovieID": { "N": "1" },
-            "Title": { "S": "Smokey and the Bandit" },
-            "Actor": { "S": "Burt Reynolds" },
-            "Dicetor": { "S": "Hal Needham" },
-            "Genre": { "S": "Comedy/Action" },
-            "Year": { "N": "1977" }
+          "Title": { "S": "Smokey and the Bandit" },
+          "Actor": { "S": "Burt Reynolds" },
+          "Dicetor": { "S": "Hal Needham" },
+          "Genre": { "S": "Comedy/Action" },
+          "Year": { "N": "1977" }
         }
       }
     },

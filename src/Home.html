@@ -5,7 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Archive</title>
     <link rel="stylesheet" href="index.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    function getTitle() {
+      var obj, dbParam, xmlhttp, myObj, movies, names, years, genres, txt = "";
+      obj = { table: "Movies"};
+      dbParam = JSON.stringify(obj);
+      xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          myObj = JSON.parse(this.responseText);
+          txt += "<table border='1'>"
+          for (movies in myObj) {
+            for (names in myObj[movies].cast) {
+              if (document.getElementById("actname").value == ""){
+                continue;
+              }
+              else if (myObj[movies].cast[names] == document.getElementById("actname").value ) {
+                txt += "<tr><td>" + myObj[movies].title + "</td></tr>";
+              }
+            }
+            for (years in myObj[movies].year) {
+              if (document.getElementById("year").value == ""){
+                continue;
+              }
+              else if (myObj[movies].year[years] == document.getElementById("year").value ) {
+                txt += "<tr><td>" + myObj[movies].title + "</td></tr>";
+              }
+            }
+            for (genres in myObj[movies].genres) {
+              if (document.getElementById("genre").value == ""){
+                continue;
+              }
+              else if (myObj[movies].genres[genres] == document.getElementById("genre").value ) {
+                txt += "<tr><td>" + myObj[movies].title + "</td></tr>";
+              }
+            }
+          }
+          txt += "</table>"    
+          document.getElementById("demo").innerHTML = txt;
+        }
+      };
+      xmlhttp.open("GET", "movie-items.txt", true);
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlhttp.send("x=" + dbParam);
+    }
+    </script>
   </head>
   <body>
       <div class="fixed-header">
@@ -21,23 +66,23 @@
       </div>
       <div class="container">
           <h2>Please fill out at least one field below</h2>
-          <form action="action_page.php" method="get">
+          <form id="myForm" class="form">
               <label for="actname">Actor's name:</label><br>
               <input type="text" id="actname" name="actname" value=""><br>
-              <label for="dicname">Dicetor's name:</label><br>
-              <input type="text" id="dicname" name="dicname" value=""><br>
               <label for="genre">Genre:</label><br>
               <input type="text" id="genre" name="genre" value=""><br>
               <label for="year">Release year:</label><br>
               <input type="text" id="year" name="year" value=""><br>
-              <input type="submit">
+              <textarea type="text" id= "textarea" style="width:200px; height:100px"></textarea><br>
           </form>
+          <button onclick="getTitle()">Submit</button>
       </div>
-      <input id="createItem" type="button" value="Create Item" onclick="createItem();" />
-      <br><br>
-      <textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+      
       <div class="fixed-footer">
           <div>Copyright &copy; 2020 Devin Durbin</div>
       </div>
+      
+    <p id="demo"></p>
+    
   </body>
 </html>

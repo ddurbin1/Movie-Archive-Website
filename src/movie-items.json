@@ -4,11 +4,11 @@
       "PutRequest": {
         "Item": {
           "MovieID": { "N": "1" },
-          "Title": { "S": "Smokey and the Bandit" },
-          "Actor": { "S": "Burt Reynolds" },
-          "Dicetor": { "S": "Hal Needham" },
-          "Genre": { "S": "Comedy/Action" },
-          "Year": { "N": "1977" }
+            "Title": { "S": "Smokey and the Bandit" },
+            "Actor": { "S": "Burt Reynolds" },
+            "Dicetor": { "S": "Hal Needham" },
+            "Genre": { "S": "Comedy/Action" },
+            "Year": { "N": "1977" }
         }
       }
     },
@@ -31,7 +31,7 @@
           "Title": { "S": "Star Wars: Episode V - The Empire Strikes Back" },
           "Actor": { "S": "Mark Hamill" },
           "Dicetor": { "S": "Irvin Kershner" },
-          "Genre": { "S": "Comedy/Action" },
+          "Genre": { "S": "Sci-fi/Adventure" },
           "Year": { "N": "1980" }
         }
       }
@@ -41,7 +41,7 @@
         "Item": {
           "MovieID": { "N": "4" },
           "Title": { "S": "Deadpool" },
-          "Actor": { "S": "Ryon Reynolds" },
+          "Actor": { "S": "Ryan Reynolds" },
           "Dicetor": { "S": "Tim Miller" },
           "Genre": { "S": "Comedy/Action" },
           "Year": { "N": "2016" }

@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>Movie Archive</title>
 </head>
 <body>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js"></script>
     <div class="fixed-header">
         <h1>Movie Archive</h1>
         <div class="container-nav">
@@ -21,13 +23,32 @@
     <div class="container">
         <div class="leftcontainer">
             <h3>Frequently Asked</h3>
+            <h4 id="questions" class="questions">
+                <div class="dataItem">
+                    <h3><b>Using the site is free? </h3> </b> <p>Yes the site is 100% free, but the site runs only by donations so we highly recommend you donate.</p>
+                </div>
+                <div class="dataItem">
+                    <h3><b>Why was this site created? </h3> </b> <p>Originally this site was created for a final university project</p>
+                </div>
+            </h4>
         </div>
         <div class="verticalLine"></div>
         <div class="rightcontainer">
             <h3>Support Links</h3>
+            <h4 id="links" class="links">
+                <div class="dataItem">
+                    <h3><b>To forum: </h3> </b> <a href="https://www.movieforums.com/community/">Forum</a>
+                </div>
+                <div class="dataItem">
+                    <h3><b>To video: </h3> </b> <a href="https://youtu.be/mguNnJP5drw">Video</a>
+                </div>
+            </h4>
+            
+            <iframe width="560" height="315" src="MovieArchive.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Just a placeholder</h3>
         </div>
     </div>
-    
+
     <div class="fixed-footer">
         <div>Copyright &copy; 2020 Devin Durbin</div>
     </div>

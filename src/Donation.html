@@ -6,7 +6,20 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
+    <script>
+        function creditDisplay() {
+            var credit = document.getElementById('form');
+            var paypal = document.getElementById('paypal');
+            paypal.style.display = 'none';
+            if (credit.style.display === 'none' || paypal.style.display === 'block') {
+                credit.style.display = 'block';
+                paypal.style.display = 'none';
+            } else if (credit.style.display === 'block' || paypal.style.display === 'none') {
+                credit.style.display = 'none';
+                paypal.style.display = 'block';
+            }
+        }
+    </script>
     <div class="fixed-header">
         <h1>Movie Archive</h1>
         <div class="container-nav">
@@ -18,12 +31,15 @@
             </nav>
         </div>
     </div>
+    <div class="toggle-container">
+        <button onclick="creditDisplay()">Toggle payment methods</button>
+    </div>
     <div class="row">
         <div class="col-75">
-            <div class="container">
-                <form action="/action_page.php">
+            <div class="credit">
+                <form id="form" action="error.html">
                     <div class="row">
-                        <div class="col-50">
+                        <div id="col-50" class="col-50">
                             <h3>Billing Address</h3>
                             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
@@ -74,8 +90,17 @@
                         </div>
 
                     </div>
-                    <input type="submit" value="Continue to checkout" class="btn">
+                    <input type="submit" value="Make Donation" class="btn">
                 </form>
+                <div id="paypal" class="paypal">
+                    <h3>Paypal</h3>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_donations" />
+                        <input type="hidden" name="business" value="XYKUPEFZM283Y" />
+                        <input type="hidden" name="currency_code" value="USD" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    </form>
+                </div>
             </div>
         </div>
     </div>

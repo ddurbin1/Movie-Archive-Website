@@ -1,180 +1,194 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: black;
+  border-radius: 3px;
+  padding: 5px 20px 5px 20px;
+}
+.questions h3 {
+  color: red;
+}
+.links h3 {
+  color: red;
+}
+.paypal {
+  color: red;
+  display: none;
+}
 body {
-    font-family: Arial;
-    padding-top: 60px;
-    padding-bottom: 40px;
+  font-family: Arial;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
-
 form {
-    color: red;
+  color: red;
 }
-
 .container-nav {
+  width: 100%;
+  max-width: 570px;
+  margin: auto;
+  background-color: black;
+  border-radius: 3px;
+  padding: 5px 20px 5px 20px;
+}
+.home-container {
+  padding-top: 100px;
+}
+.container {
+  background-color: #f2f2f2;
+  padding: 100px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.credit {
+  background-color: #f2f2f2;
+  padding: 10px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.verticalLine {
+  position: absolute;
+  background-color: black;
+  width: 2px;
+  top: 200px;
+  bottom: 90px;
+  left: 50%;
+}
+.leftcontainer {
+  width: 49%;
+  position: fixed;
+  top: 200px;
+  left: 1%;
+}
+.rightcontainer {
+  width: 49%;
+  position: fixed;
+  top: 200px;
+  left: 51%;
+}
+.fixed-header {
+  width: 100%;
+  position: fixed;
+  background: #333;
+  padding: 10px 10px;
+  color: #fff;
+  top: 0;
+}
+.fixed-footer {
+  width: 100%;
+  position: fixed;
+  background: #333;
+  padding: 10px 10px;
+  color: #fff;
+  bottom: 0;
+}
+nav a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 7px 25px;
+  display: inline-block;
+}
+.info {
+  width: 100%;
+  position: fixed;
+  top: 200px;
+  left: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+.col-25 {
+  -ms-flex: 25%;
+  flex: 25%;
+  padding: 0 16px;
+}
+.col-50 {
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 0 16px;
+}
+.col-75 {
+  -ms-flex: 75%;
+  flex: 75%;
+  padding: 0 16px;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.btn:hover {
+  background-color: #45a049;
+}
+.toggle-container {
+  padding: 100px 0px 10px 0px;
+}
+a {
+  color: #2196F3;
+}
+hr {
+  border: 1px solid lightgrey;
+}
+@media (max-width: 1100px) {
+  iframe {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .toggle-container {
+    padding: 90px 0px 10px 0px;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+  .container-nav {
     width: 100%;
-    max-width: 570px;
+    max-width: 430px;
     margin: auto;
     background-color: black;
     border-radius: 3px;
     padding: 5px 20px 5px 20px;
-}
-
-.container {
-    background-color: #f2f2f2;
-    padding: 90px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-}
-
-.verticalLine {
-    position: absolute;
-    background-color: black;
-    width: 2px;
-    top: 200px;
-    bottom: 90px;
-    left: 50%;
-}
-
-.leftcontainer, .rightcontainer {
-    width: 49%;
-    position: fixed;
-    top: 200px;
-}
-
-.leftcontainer {
-    left: 1%;
-}
-
-.rightcontainer {
-    left: 51%;
-}
-
-.fixed-header, .fixed-footer {
-    width: 100%;
-    position: fixed;
-    background: #333;
-    padding: 10px 10px;
+  }
+  nav a {
     color: #fff;
-}
-
-.fixed-header {
-    top: 0;
-}
-
-.fixed-footer {
-    bottom: 0;
-}
-
-nav a {
-    color: #fff;
-    font-size: 20px;
+    font-size: 18.2px;
     text-decoration: none;
-    padding: 7px 25px;
+    padding: 2px 11px;
     display: inline-block;
-}
-
-.info {
-    width: 100%;
-    position: fixed;
-    top: 200px;
-    left: 10px;
-}
-
-.dropdown {
-    width: 100%;
-    position: fixed;
-    top: 200px;
-    left: 10px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    margin: 0 -16px;
-}
-
-.col-25 {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-}
-
-.col-50 {
-    -ms-flex: 50%; /* IE10 */
-    flex: 50%;
-}
-
-.col-75 {
-    -ms-flex: 75%; /* IE10 */
-    flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-    padding: 0 16px;
-}
-
-
-
-input[type=text] {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-label {
-    margin-bottom: 10px;
-    display: block;
-}
-
-.icon-container {
-    margin-bottom: 20px;
-    padding: 7px 0;
-    font-size: 24px;
-}
-
-.btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    width: 100%;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 17px;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-
-a {
-    color: #2196F3;
-}
-
-hr {
-    border: 1px solid lightgrey;
-}
-
-span.price {
-    float: right;
-    color: grey;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-    .row {
-        flex-direction: column-reverse;
-    }
-
-    .col-25 {
-        margin-bottom: 20px;
-    }
+  }
 }
